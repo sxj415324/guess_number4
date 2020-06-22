@@ -2,7 +2,9 @@ package com.twschool.practice.api;
 
 import com.twschool.practice.domain.AnswerGenerator;
 import com.twschool.practice.domain.GuessNumberGame;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class GameRepository {
     private GuessNumberGame guessNumberGame = new GuessNumberGame(new AnswerGenerator());
 

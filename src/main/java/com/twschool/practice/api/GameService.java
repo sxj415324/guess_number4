@@ -1,7 +1,9 @@
 package com.twschool.practice.api;
 
 import com.twschool.practice.domain.GuessNumberGame;
+import org.springframework.stereotype.Service;
 
+@Service
 public class GameService {
     private GameRepository gameRepository;
 
