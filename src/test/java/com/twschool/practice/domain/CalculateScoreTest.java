@@ -16,6 +16,16 @@ public class CalculateScoreTest {
     }
 
     @Test
+    public void should_return_Negative_3_when_success_0_times_and_fail_1_times() {
+        //given
+        CalculateScore calculateScore = new CalculateScore(1,0);
+        //when
+        userTotalScores =calculateScore.calculate() + calculateScore.calculateExtra();
+        //then
+        Assert.assertEquals(-3, userTotalScores);
+    }
+
+    @Test
     public void should_return_0_when_success_2_times_and_fail_2_times() {
         //given
         CalculateScore calculateScore = new CalculateScore(2,2);
@@ -56,13 +66,14 @@ public class CalculateScoreTest {
     }
 
     @Test
-    public void should_return_Negative_3_when_success_0_times_and_fail_1_times() {
+    public void should_return_42_when_success_10_times_and_fail_0_times() {
         //given
-        CalculateScore calculateScore = new CalculateScore(1,0);
+        CalculateScore calculateScore = new CalculateScore(0,10);
         //when
         userTotalScores =calculateScore.calculate() + calculateScore.calculateExtra();
         //then
-        Assert.assertEquals(-3, userTotalScores);
+        Assert.assertEquals(42, userTotalScores);
     }
+
 
 }
