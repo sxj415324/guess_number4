@@ -1,10 +1,10 @@
 package com.twschool.practice.domain;
 
-public class CalculateScore {
+public class GameScore {
     private int failTimes;
     private int successTimes;
 
-    public CalculateScore(int failTimes, int successTimes) {
+    public GameScore(int failTimes, int successTimes) {
         this.failTimes = failTimes;
         this.successTimes = successTimes;
     }
