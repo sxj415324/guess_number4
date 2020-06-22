@@ -23,4 +23,14 @@ public class CalculateScoreTest {
         Assert.assertEquals(0, userTotalScores);
     }
 
+    @Test
+    public void should_return_11_when_success_3times_and_fail_0times() {
+        CalculateScore calculateScore = new CalculateScore(0,3);
+
+        userTotalScores =calculateScore.calculate() + calculateScore.calculateExtra();
+
+        Assert.assertEquals(11, userTotalScores);
+    }
+
+
 }
