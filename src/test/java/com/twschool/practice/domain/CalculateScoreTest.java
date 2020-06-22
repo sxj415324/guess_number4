@@ -32,5 +32,14 @@ public class CalculateScoreTest {
         Assert.assertEquals(11, userTotalScores);
     }
 
+    @Test
+    public void should_return_20_when_success_5times_and_fail_0times() {
+        CalculateScore calculateScore = new CalculateScore(0,5);
+
+        userTotalScores =calculateScore.calculate() + calculateScore.calculateExtra();
+
+        Assert.assertEquals(20, userTotalScores);
+    }
+
 
 }
