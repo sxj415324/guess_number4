@@ -75,5 +75,14 @@ public class CalculateScoreTest {
         Assert.assertEquals(42, userTotalScores);
     }
 
+    @Test
+    public void should_return_64_when_success_15_times_and_fail_0_times() {
+        //given
+        CalculateScore calculateScore = new CalculateScore(0,15);
+        //when
+        userTotalScores =calculateScore.calculate() + calculateScore.calculateExtra();
+        //then
+        Assert.assertEquals(64, userTotalScores);
+    }
 
 }
