@@ -48,6 +48,7 @@ public class GuessNumberGameTest {
         GameStatus gameStatus = guessNumberGame.getStatus();
 
         Assert.assertEquals(GameStatus.CONTINUED, gameStatus);
+
     }
 
     @Test
